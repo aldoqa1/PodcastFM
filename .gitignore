@@ -19,3 +19,5 @@ vendor/           # PHP Composer
 # Ignorar configuraciones específicas del proyecto
 .env              # Archivos de entorno
 *.env             # Cualquier archivo de configuración de entorno
+node_modules
+node_modules
