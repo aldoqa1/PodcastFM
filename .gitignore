@@ -1,0 +1,21 @@
+# Ignorar archivos del sistema operativo
+Thumbs.db         # Windows
+
+# Ignorar archivos de compilación
+*.class           # Java
+*.o               # Archivos objeto
+*.exe             # Ejecutables en general
+
+# Ignorar archivos de configuración IDE
+.vscode/          # Visual Studio Code
+# Ignorar archivos de dependencias (gestores de paquetes)
+node_modules/     # Node.js
+vendor/           # PHP Composer
+*.log             # Archivos de log
+
+# Ignorar archivos de base de datos locales
+*.db              # Archivos de base de datos
+
+# Ignorar configuraciones específicas del proyecto
+.env              # Archivos de entorno
+*.env             # Cualquier archivo de configuración de entorno
