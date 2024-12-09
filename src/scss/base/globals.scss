@@ -1,0 +1,30 @@
+@use "variables" as var;
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*:after, *:before, *{
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: var.$font_principal;
+    transition: all 0.5s linear;
+}
+
+.content{
+    width:min(120rem,95%);
+    margin: 0rem auto;
+}
+
+h1{
+    font-size: 5rem;
+    margin: 0.5rem;
+}
+
+h2{
+    font-size: 3.5rem;
+}

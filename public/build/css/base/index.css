@@ -1,0 +1,67 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*:after, *:before, * {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  transition: all 0.5s linear;
+}
+
+.content {
+  width: min(120rem, 95%);
+  margin: 0rem auto;
+}
+
+h1 {
+  font-size: 5rem;
+  margin: 0.5rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+.light {
+  font-weight: 300;
+  font-size: 4rem;
+}
+
+.bold {
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+.grid-3 {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 480px) {
+  .grid-3 {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.grid-6 {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(6, 1fr);
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0rem auto;
+}
+.grid-6 p {
+  margin: 1rem 0.5rem;
+  padding: 0rem;
+}

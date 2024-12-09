@@ -1,0 +1,38 @@
+.light {
+  font-weight: 300;
+  font-size: 4rem;
+}
+
+.bold {
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+.grid-3 {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 480px) {
+  .grid-3 {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.grid-6 {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(6, 1fr);
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0rem auto;
+}
+.grid-6 p {
+  margin: 1rem 0.5rem;
+  padding: 0rem;
+}

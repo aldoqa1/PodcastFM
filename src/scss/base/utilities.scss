@@ -1,0 +1,33 @@
+@use "variables" as var;
+@use "mixins" as mix;
+
+.light{
+    font-weight: 300;
+    font-size: 4rem;
+}
+
+.bold{
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+.grid-3{
+    @include mix.grid(3,2rem);
+    @include mix.phone(){
+        @include mix.grid(1,1rem);
+    }
+}
+
+.grid-6{
+    @include mix.grid(6,0.5rem);
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0rem auto;
+    p{
+        margin: 1rem 0.5rem;
+        padding: 0rem;
+    }
+}

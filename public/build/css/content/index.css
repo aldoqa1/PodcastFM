@@ -1,0 +1,21 @@
+.header {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.header a {
+  text-decoration: none;
+}
+
+.iconos-contenido-principal {
+  text-align: center;
+  display: flex;
+  padding: 1.5rem;
+  flex-direction: column;
+  align-items: center;
+}
+.iconos-contenido-principal img {
+  width: auto;
+  height: 10rem;
+}

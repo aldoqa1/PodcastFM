@@ -1,0 +1,11 @@
+.iconos-contenido-principal {
+  text-align: center;
+  display: flex;
+  padding: 1.5rem;
+  flex-direction: column;
+  align-items: center;
+}
+.iconos-contenido-principal img {
+  width: auto;
+  height: 10rem;
+}

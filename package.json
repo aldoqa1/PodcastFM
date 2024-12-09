@@ -1,0 +1,21 @@
+{
+  "name": "podcastfm-landingpage",
+  "version": "1.0.0",
+  "description": "Sass, Gulp y Bootstrap",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp DEV"
+  },
+  "author": "Aldo Quevedo",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-avif": "^1.1.1",
+    "gulp-cache": "^1.1.3",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^6.0.0",
+    "gulp-webp": "^4.0.1",
+    "sass": "^1.82.0"
+  }
+}

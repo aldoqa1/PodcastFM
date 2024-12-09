@@ -1,0 +1,11 @@
+@mixin grid($number,$gap){
+    display: grid;
+    gap: $gap;
+    grid-template-columns: repeat($number,1fr);
+}
+
+@mixin phone(){
+    @media (max-width: 480px){
+        @content;
+    }
+}
