@@ -1,14 +1,283 @@
 @use "../base/variables" as var;
 @use "../base/mixins" as mix;
 
-.iconos-contenido-principal{
-    text-align: center;
-    display: flex;
-    padding: 1.5rem;
-    flex-direction: column;
-    align-items: center;
-    img{
-        width: auto;
-        height: 10rem;
+.header{
+    
+    height: 50rem;
+
+    @include mix.backgroundImage("/public/build/images/header.jpg",var.$secundary_color);
+
+    @media (max-width: 992px) {
+        height: auto;
     }
+
+    .logo{
+        width: 12rem;
+    }
+
+    h1{
+        color: var.$white_color;
+        width: min(35rem, 90%); 
+    }
+
+    .button{
+        @include mix.button(var.$principal_color, var.$secundary_color);
+    }
+}
+
+.create-podcast{
+    padding: 5rem 1.5rem;
+
+    h2{
+        @include mix.title(var.$secundary_color, var.$principal_color);
+    }
+}
+
+.profits{
+
+    background-color: var.$principal_color;
+    padding: 5rem 2rem;
+
+    h2{
+        @include mix.title(var.$secundary_color, var.$white_color);
+    }
+
+    img{
+        transition: all 0.5s ease;
+        width: 80%;
+        &:hover{
+            transform: scale(1.05) rotateZ(-15deg);
+        }
+        
+        @media (max-width: 992px) {
+            margin: 4rem auto;
+        }
+    }
+
+}
+
+.statistics{
+
+    padding: 5rem 1rem;
+
+    h2{
+        @include mix.title(var.$secundary_color, var.$principal_color);
+        display: block;
+        margin: 1.5rem 0;
+    }
+}
+
+.plans{
+    background-color: var.$secundary_color;
+    padding: 5rem 1rem 13rem 1rem;
+    @media (max-width: 992px) {
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+    }
+
+    p{
+        color: var.$white_color;
+        margin-top: 1rem;
+        margin-bottom: 7rem;
+        @media (max-width: 992px) {
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;   
+        }
+    }
+
+    h2{
+        @include mix.title(var.$white_color, var.$principal_color);
+        @media (max-width: 992px) {
+            margin-left: 1rem;
+        }
+    }
+    
+    button{
+        margin: 1.5rem auto;
+        display: block;
+        @include mix.button(var.$principal_color, var.$secundary_color);
+    }
+
+    ul{
+        padding: 0;
+    }
+
+    li{
+        padding: 0;
+        margin: auto;
+        width: fit-content;
+        color: var.$secundary_color;
+        list-style: none;
+    }
+
+    img{
+        width: 30%;
+        margin: auto;
+        display: block;
+        margin-bottom: 2rem;
+    }
+
+    .start, .pro{
+        background-color: var.$white_color;
+        border-radius: 1rem;
+        padding: 2.5rem 1rem 0 1rem;
+        @media (max-width: 992px) {
+            border-radius: 0;   
+            border-bottom: 1px solid rgb(218, 214, 209); 
+            padding-bottom: 0.5rem;
+        }
+    }
+
+    .price{
+        font-weight: bold;
+        margin: 20px auto;
+        display: block;
+        width: fit-content;
+    }
+
+    .bussiness{
+        background-color: var.$principal_color;
+        margin: -5rem 0;
+        border-radius: 1rem;
+        padding: 2.5rem 1rem 0 1rem;
+        z-index: 10;
+        @media (max-width: 992px) {
+            margin: 0;   
+            border-radius: 0;
+        }
+        
+        button{
+            border: 1px solid var.$white_color;
+        }
+    }
+    
+    .bussiness img{
+        margin-top: 4.5rem;
+    }
+
+    .bussiness span{
+        margin: 1.5rem auto;
+        font-weight: bold;
+        display: block;
+        text-align: center;
+    }
+
+    h3{
+        text-align: center;
+    }
+
+    .start,
+    .bussiness,
+    .pro{
+        transition: all 0.5s ease;
+    }
+    
+    .start:hover,
+    .bussiness:hover,
+    .pro:hover{
+        transform: scale(1.05);
+        @media (max-width: 992px) {
+            transform: none;   
+        }
+    }
+
+}
+
+.testimonials{
+
+    padding: 6rem 1rem;
+    
+    h2{
+        @include mix.title(var.$secundary_color, var.$principal_color);
+        @media (max-width: 992px) {
+            margin-top: 3rem;
+            display: block;   
+        }
+    }
+    
+    img{
+        margin: auto;
+        width: 80%;
+        display: block;
+    }
+    
+    .testimonial{
+        margin-top: 4rem;
+        background-color: var.$principal_color;
+        color: var.$secundary_color;
+        padding: 1.5rem 0.5rem 1.5rem 5.5rem;
+        border-radius: 1rem;
+        border: 0.3rem solid var.$secundary_color;
+        position: relative;
+        @media (max-width: 992px) {
+            margin: 1.5rem 0;
+        }
+    }
+    
+    .testimonial::after{
+        position: absolute;
+        top: 1rem;
+        left: 0.8rem;
+        width: 4rem;
+        height: 4rem;
+        content: '';
+        background-image: url("/public/build/images/comilla.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+.footer{
+    background-color: var.$secundary_color;
+    color: var.$white_color;
+    padding: 3.5rem 1.5rem 0.5rem 1.5rem;
+
+    img{
+        width: 12rem;
+        display: block;
+        margin: auto;        
+        @media (max-width: 992px) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    h3{
+        color: var.$principal_color;
+        @media (max-width: 992px) {
+            text-align: center;
+            margin-top: 2rem;
+        }
+    }
+
+    ul{
+        padding: 0;
+    }
+
+    li{
+        list-style-type: none;
+        padding: 0;
+        @media (max-width: 992px) {
+            text-align: center;;
+        }
+    }
+
+    .rights{
+        font-size: 1.3rem;
+        text-align: center;
+        display: block; 
+        border-top: 1px solid rgba(211, 211, 211, 0.301);
+        padding-top: 1rem;
+    }
+
+    a{
+        text-decoration: none;
+        color: var.$white_color;
+        transition: all 0.5s ease;
+        &:hover{
+            color: var.$principal_color;
+        }
+    }
+
 }

@@ -1,7 +1,51 @@
+@mixin title($colorText, $colorLine){
+    position: relative;
+    display: inline;
+    color: $colorText;
+    width: fit-content;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    z-index: 1;
+    &::after{
+        position: absolute;
+        content: '';
+        background-color: $colorLine;
+        height: 1rem;
+        width: 100%;
+        bottom: .3rem;
+        left: 0;
+        z-index: -1;
+    }
+}
+
+@mixin backgroundImage($url, $color){
+    background-image: linear-gradient(rgba($color, 0.6) 0%, rgba($color, 0.9) 100%), url($url);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+@mixin button($colorBg, $colorText){
+    color: $colorText;
+    background-color: $colorBg;
+    width: fit-content;
+    padding: 1rem 2rem;
+    border-radius: .3rem;
+    border: none;
+    font-weight: bold;
+    &:active{
+        transform: scale(0.9);
+    }
+    transition: all 0.5s ease;
+    @media (max-width: 992px) {
+        width: 100%;
+    }
+}
+
 @mixin grid($number,$gap){
     display: grid;
     gap: $gap;
-    grid-template-columns: repeat($number,1fr);
+    grid-template-columns: repeat($number, 1fr);
 }
 
 @mixin phone(){

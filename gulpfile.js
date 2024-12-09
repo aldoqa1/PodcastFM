@@ -2,6 +2,8 @@
 const {src, watch, dest, parallel} = require("gulp");
 const plumberV = require("gulp-plumber");
 const sassV = require("gulp-sass")(require("sass"));
+const purgecss = require("gulp-purgecss");
+const rename = require("gulp-rename");
 
 //images
 const cacheV = require("gulp-cache");
@@ -26,6 +28,21 @@ function js(done){
     src("./src/js/**/*.js")
     .pipe(plumberV())
     .pipe(dest("./public/build/js/"));
+    cssbuild();
+    done();
+
+}
+
+function cssbuild(done){
+
+    src("./public/build/css/app.css")
+    .pipe( rename({
+        suffix: ".min"
+    }))
+    .pipe(purgecss({
+        content: ["index.html"]
+    }))
+    .pipe(dest("./public/build/css"));
 
     done();
 
@@ -67,6 +84,7 @@ function dev(done){
 
     watch("./src/scss/**/*.scss", css);
     watch("./src/js/**/*.js", js);
+    watch("./public/build/css/app.css", cssbuild);
     
     done();
     
